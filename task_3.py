@@ -8,7 +8,7 @@ class PointsForPlace:
             return 'Спортсмен не может занять нулевое или отрицательное место'
         else:
             points += (101 - place)
-            return points
+            return int(points)
 
 class PointsForMeters:
     @staticmethod
@@ -17,8 +17,8 @@ class PointsForMeters:
         if meters < 0:
             return 'Количество метров не может быть отрицательным'
         else:
-            points = int(meters * 0.5)
-            return points
+            points = (meters * 0.5)
+            return int(points)
 
 class TotalPoints(PointsForPlace, PointsForMeters):
     @staticmethod
